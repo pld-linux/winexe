@@ -6,12 +6,14 @@
 %bcond_with	pthreads
 %bcond_with	setproctitle
 %bcond_with	incpopt
+%bcond_with	wmic
+%bcond_with	wmis
 #
 Summary:	winexe - remotely executes commands on WindowsNT/2000/XP/2003 systems from GNU/Linux
 Summary(pl.UTF-8):	winexe - zdalne wywołanie polecń na WindowsNT/2000/XP/2003 spod systemu GNU/Linux
 Name:		winexe
 Version:	071026
-Release:	0.1
+Release:	1
 Epoch:		0
 License:	GPL/GPL v2/GPL v3
 Group:		Applications
@@ -70,10 +72,10 @@ odpowiednik psexec.
 #	--enable-reg-gconf
 
 %{__make} proto \
-	bin/wmic \
-	bin/wmis \
 	bin/winexe \
-	%{?with_python: wmi/_pywmi.dylib} \
+	%{?with_wmic: bin/wmic} \
+	%{?with_wmis: bin/wmis} \
+	%{?with_python: wmi/_pywmi.dylib}
 
 %install
 rm -rf $RPM_BUILD_ROOT
