@@ -13,7 +13,7 @@ Summary:	winexe - remotely executes commands on WindowsNT/2000/XP/2003 systems f
 Summary(pl.UTF-8):	winexe - zdalne wywołanie polecń na WindowsNT/2000/XP/2003 spod systemu GNU/Linux
 Name:		winexe
 Version:	071026
-Release:	2
+Release:	3
 Epoch:		0
 License:	GPL/GPL v2/GPL v3
 Group:		Applications
