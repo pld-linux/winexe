@@ -13,7 +13,7 @@ Summary:	winexe - remotely executes commands on WindowsNT/2000/XP/2003 systems f
 Summary(pl.UTF-8):	winexe - zdalne wywołanie polecń na WindowsNT/2000/XP/2003 spod systemu GNU/Linux
 Name:		winexe
 Version:	071026
-Release:	3
+Release:	4
 Epoch:		0
 License:	GPL/GPL v2/GPL v3
 Group:		Applications
@@ -80,7 +80,9 @@ odpowiednik psexec.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-install bin/{winexe,wmic,wmis} $RPM_BUILD_ROOT%{_bindir}
+install bin/winexe $RPM_BUILD_ROOT%{_bindir}
+%{?with_wmic: install bin/wmic $RPM_BUILD_ROOT%{_bindir} }
+%{?with_wmis: install bin/wmis $RPM_BUILD_ROOT%{_bindir} }
 
 %clean
 rm -rf $RPM_BUILD_ROOT
