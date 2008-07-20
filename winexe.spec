@@ -1,6 +1,5 @@
 #
 # Conditional build:
-%bcond_with	sqlite3
 %bcond_with	python
 %bcond_with	sqlite3
 %bcond_with	pthreads
@@ -10,12 +9,12 @@
 %bcond_with	wmis
 #
 Summary:	winexe - remotely executes commands on WindowsNT/2000/XP/2003 systems from GNU/Linux
-Summary(pl.UTF-8):	winexe - zdalne wywołanie polecń na WindowsNT/2000/XP/2003 spod systemu GNU/Linux
+Summary(pl.UTF-8):	winexe - zdalne wywoływanie poleceń na WindowsNT/2000/XP/2003 spod Linuksa
 Name:		winexe
 Version:	071026
 Release:	4
 Epoch:		0
-License:	GPL/GPL v2/GPL v3
+License:	GPL v2
 Group:		Applications
 Source0:	http://eol.ovh.org/winexe/%{name}-source-%{version}.tar.bz2
 # Source0-md5:	4eb7bc95014e6db7cd930513139f915f
@@ -49,11 +48,11 @@ uses RPC/DCOM mechanism to interact with WMI services on Windows
 execution Windows commands remotely from Linux box.
 
 %description -l pl.UTF-8
-Implementacja klienta DCOM/WMI na bazie kodu Samba4. Używa
-mechanizmuRPC/DCOM do komunikacji z usługą WMI na komputerach z
-Windows 2000/XP/2003. Zawiera winexe program ktory zdalnie wywołuje
+Implementacja klienta DCOM/WMI na bazie kodu Samba4. Używa mechanizmu
+RPC/DCOM do komunikacji z usługą WMI na komputerach z
+Windows 2000/XP/2003. Zawiera program winexe, ktory zdalnie wywołuje
 polecenia na WindowsNT/2000/XP/2003 spod systemu GNU/Linux,
-odpowiednik psexec.
+będąc odpowiednikiem psexec.
 
 %prep
 %setup -q -n %{name}-source-%{version}
